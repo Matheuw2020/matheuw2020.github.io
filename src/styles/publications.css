@@ -449,7 +449,7 @@
 
 .pub-doi {
     padding: 0.2rem 0.6rem;
-    background: rgba(255, 0, 119, 0.1);
+    background: color-mix(in oklch, var(--color-accent) 15%, transparent);
     color: var(--color-accent);
     border-radius: 4px;
     font-size: 0.75rem;
