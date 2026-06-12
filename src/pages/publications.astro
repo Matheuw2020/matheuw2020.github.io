@@ -7,8 +7,8 @@ import '../styles/publications.css';
 
 // Extract years for filters
 const years = [...new Set(publicationsData.map(pub => pub.year))].sort((a, b) => b - a);
-const minYear = Math.min(...years);
-const maxYear = Math.max(...years);
+const minYear = years.length ? Math.min(...years) : 0;
+const maxYear = years.length ? Math.max(...years) : 0;
 
 // Extract unique publication types
 const publicationTypes = [...new Set(publicationsData.map(pub => pub.publicationType).filter(Boolean))];
