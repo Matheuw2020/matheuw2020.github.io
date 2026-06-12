@@ -65,33 +65,12 @@ const publicationTypes = [...new Set(publicationsData.map(pub => pub.publication
 
                 </div>
             </div>
-
-            <!-- 🔥 AQUÍ EMPIEZA LO IMPORTANTE -->
-            <div class="publications-grid">
-
-                {publicationsData.map((pub) => (
-                    <article class="publication-card">
-
-                        {/* 🖼 IMAGE */}
-                        {pub.image && (
-                            <div class="pub-image">
-                                <img src={pub.image} alt={pub.title} loading="lazy" />
-                            </div>
-                        )}
-
-                        <div class="publication-content">
-                            <h3>{pub.title}</h3>
-                            <p>{pub.authors}</p>
-                        </div>
-
-                    </article>
-                ))}
-
+               <div>
+  {publicationsData.map(pub => (
+    <p>{pub.title}</p>
+  ))}
+</div>
             </div>
-            <!-- 🔥 FIN GRID -->
-
-        </div>
-    </div>
 </Layout>
 
                 <!-- Filters Row -->
