@@ -36,8 +36,38 @@ const publicationTypes = [...new Set(publicationsData.map(pub => pub.publication
         </div>
 
         <div class="publications-section">
+
             <!-- Controls -->
             <div class="controls-wrapper">
+                <!-- filtros aquí -->
+            </div>
+
+            <!-- 🔥 PUBLICATIONS GRID -->
+            <div class="publications-grid">
+
+                {publicationsData.map((pub) => (
+                    <article class="publication-card">
+
+                        {pub.image && (
+                            <div class="pub-image">
+                                <img src={pub.image} alt={pub.title} loading="lazy" />
+                            </div>
+                        )}
+
+                        <div class="publication-content">
+                            <h3>{pub.title}</h3>
+                            <p>{pub.authors}</p>
+                        </div>
+
+                    </article>
+                ))}
+
+            </div>
+
+        </div> <!-- publications-section -->
+
+    </div>
+</Layout>
                 <button class="controls-toggle-btn" id="controls-toggle" aria-expanded="false" aria-label="Toggle filters">
                     <span class="toggle-label">Filters</span>
                     <svg class="toggle-arrow" viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
