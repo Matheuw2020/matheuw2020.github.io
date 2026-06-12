@@ -4,7 +4,7 @@ This guide explains how to structure your publications in `publications.json`.
 
 ## JSON Structure
 
-The file contains an array of publication objects. Each publication should follow this structure:
+The file containsi an array of publication objects. Each publication should follow this structure:
 
 ```json
 {
