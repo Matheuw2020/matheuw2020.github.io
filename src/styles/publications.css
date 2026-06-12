@@ -542,21 +542,4 @@
         text-align: center;
         min-width: max-content;
     }
-
-.pub-image {
-  width: 100%;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-bottom: 10px;
-}
-
-.pub-image img {
-  width: 100%;
-  display: block;
-  transition: transform 0.3s ease;
-}
-
-.publication-card:hover .pub-image img {
-  transform: scale(1.05);
-}
 }
