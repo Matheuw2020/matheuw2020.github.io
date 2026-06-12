@@ -7,27 +7,68 @@ import portraitImage from '../assets/portrait.png';
 import '../styles/about.css';
 ---
 
-<Layout pageTitle="About">
+<Layout pageTitle="Sobre Mi">
     <div class="page-container">
-        <h1>About me</h1>
+
+        <h1>Sobre mí</h1>
 
         <div class="about-content">
+
             <div class="about-intro-wrapper centered-column">
+
                 <div class="about-header centered-column">
-                    <Image src={portraitImage} alt={SITE_DATA.name} class="about-portrait" />
+                    <Image 
+                        src={portraitImage} 
+                        alt={SITE_DATA.name} 
+                        class="about-portrait" 
+                    />
                     <h2 class="about-name">{SITE_DATA.name}</h2>
+                    <p class="about-role">Estudiante de Ciberseguridad</p>
                 </div>
 
-                <p class="intro-text">
-                    Lead Investigator of Interspecies Mechanics at the Laboratory for Avian &amp; Feline Dynamics,
-                    Institute of Mythical Studies. I study the <strong>Kinematics of Soft Systems</strong>: how fluff,
-                    feathers, and theoretical horns behave under rigorous physical analysis. My long-running
-                    <strong>Monoceros Initiative</strong> is exactly what it sounds like, and the data is
-                    peer-reviewed. 500+ hours of nocturnal field work, two sub-zero winters in a barn, and one cat
-                    who claimed my sleeping bag as sovereign territory have only deepened my commitment to the discipline.
-                    I go by "Bee"—officially for my initials, unofficially because I sting.
-                </p>
+                <div class="intro-text">
+
+                    <p>
+                        Soy estudiante de ciberseguridad con un fuerte interés en la administración de sistemas Linux,
+                        redes, automatización y seguridad ofensiva. Mi enfoque principal se centra en el aprendizaje
+                        práctico mediante laboratorios, desafíos técnicos y la construcción de proyectos personales
+                        que me permiten desarrollar una comprensión sólida de los fundamentos de la seguridad informática.
+                    </p>
+
+                    <p>
+                        A lo largo de mi formación he trabajado con distribuciones Linux, scripting en Bash y herramientas
+                        utilizadas habitualmente en entornos de análisis y evaluación de seguridad. Considero que la mejor
+                        forma de aprender es mediante la práctica constante, por lo que dedico parte de mi tiempo al estudio
+                        de plataformas de entrenamiento, resolución de retos técnicos y documentación de conocimientos adquiridos.
+                    </p>
+
+                    <h3>Áreas de interés</h3>
+
+                    <ul class="skills-list">
+                        <li>Sistemas Linux y administración básica.</li>
+                        <li>Redes y protocolos de comunicación.</li>
+                        <li>Bash Scripting y automatización de tareas.</li>
+                        <li>Seguridad ofensiva y pruebas de penetración.</li>
+                        <li>Enumeración y análisis de servicios.</li>
+                        <li>Metodologías de aprendizaje práctico en ciberseguridad.</li>
+                    </ul>
+
+                    <p>
+                        Actualmente continúo fortaleciendo mis conocimientos técnicos mediante el estudio diario,
+                        la resolución de laboratorios y el desarrollo de proyectos personales orientados a la seguridad
+                        informática. Mi objetivo es construir una base sólida que me permita contribuir profesionalmente
+                        al ecosistema de ciberseguridad en Latinoamérica y participar en iniciativas que promuevan el
+                        aprendizaje, la investigación y el uso responsable de la tecnología.
+                    </p>
+
+                </div>
+
             </div>
+
+        </div>
+
+    </div>
+</Layout>
 
             <section>
                 <h2>Research Statement</h2>
