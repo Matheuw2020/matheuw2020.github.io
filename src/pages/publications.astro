@@ -7,8 +7,8 @@ import '../styles/publications.css';
 
 // Extract years for filters
 const years = [...new Set(publicationsData.map(pub => pub.year))].sort((a, b) => b - a);
-const minYear = years.length ? Math.min(...years) : 0;
-const maxYear = years.length ? Math.max(...years) : 0;
+const minYear = Math.min(...years);
+const maxYear = Math.max(...years);
 
 // Extract unique publication types
 const publicationTypes = [...new Set(publicationsData.map(pub => pub.publicationType).filter(Boolean))];
@@ -22,15 +22,18 @@ const publicationTypes = [...new Set(publicationsData.map(pub => pub.publication
             <p>
                 For an up-to-date list of my peer-reviewed publications and preprints, see:
             </p>
+
             <a href={`https://scholar.google.com/citations?user=${SITE_DATA.scholar}`}
                class="info-card-link"
                target="_blank"
                rel="noopener noreferrer"
                aria-label="Visit Google Scholar profile">
+
                 <svg viewBox="0 0 24 24" width="60" height="60" fill="currentColor">
                     <path d="M12 2L1 7l11 5 9-4.09V17h2V7L12 2z"></path>
                     <path d="M19 11v6c0 1.66-3.13 3-7 3s-7-1.34-7-3v-6l7 3 7-3z"></path>
                 </svg>
+
                 <span>Google Scholar</span>
             </a>
         </div>
@@ -39,15 +42,37 @@ const publicationTypes = [...new Set(publicationsData.map(pub => pub.publication
 
             <!-- Controls -->
             <div class="controls-wrapper">
-                <!-- filtros aquí -->
+
+                <button class="controls-toggle-btn" id="controls-toggle" aria-expanded="false" aria-label="Toggle filters">
+                    <span class="toggle-label">Filters</span>
+                    <svg class="toggle-arrow" viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                        <path d="M7 10l5 5 5-5"/>
+                    </svg>
+                </button>
+
+                <div class="controls-container collapsed" id="controls-container">
+
+                    <!-- Search -->
+                    <div class="control-section">
+                        <label class="section-label">Search</label>
+                        <input
+                            type="text"
+                            id="search-input"
+                            class="search-input"
+                            placeholder="Keywords (comma-separated)"
+                        />
+                    </div>
+
+                </div>
             </div>
 
-            <!-- 🔥 PUBLICATIONS GRID -->
+            <!-- 🔥 AQUÍ EMPIEZA LO IMPORTANTE -->
             <div class="publications-grid">
 
                 {publicationsData.map((pub) => (
                     <article class="publication-card">
 
+                        {/* 🖼 IMAGE */}
                         {pub.image && (
                             <div class="pub-image">
                                 <img src={pub.image} alt={pub.title} loading="lazy" />
@@ -63,28 +88,11 @@ const publicationTypes = [...new Set(publicationsData.map(pub => pub.publication
                 ))}
 
             </div>
+            <!-- 🔥 FIN GRID -->
 
-        </div> <!-- publications-section -->
-
+        </div>
     </div>
 </Layout>
-                <button class="controls-toggle-btn" id="controls-toggle" aria-expanded="false" aria-label="Toggle filters">
-                    <span class="toggle-label">Filters</span>
-                    <svg class="toggle-arrow" viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
-                        <path d="M7 10l5 5 5-5z"/>
-                    </svg>
-                </button>
-                <div class="controls-container collapsed" id="controls-container">
-                <!-- Search -->
-                <div class="control-section">
-                    <label class="section-label">Search</label>
-                    <input
-                        type="text"
-                        id="search-input"
-                        class="search-input"
-                        placeholder="Keywords (comma-separated)"
-                    />
-                </div>
 
                 <!-- Filters Row -->
                 <div class="filters-row">
