@@ -543,10 +543,6 @@
         min-width: max-content;
     }
 
-    /* ===================== */
-/* Publication Image */
-/* ===================== */
-
 .pub-image {
   width: 100%;
   border-radius: 10px;
@@ -562,4 +558,5 @@
 
 .publication-card:hover .pub-image img {
   transform: scale(1.05);
+}
 }
