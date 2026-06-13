@@ -3,7 +3,6 @@ import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import { SITE_DATA } from '../constants';
 import portraitImage from '../assets/portrait.png';
-import About from '../content/aboutme.md';
 import '../styles/about.css';
 ---
 
@@ -25,9 +24,77 @@ import '../styles/about.css';
                     <h2 class="about-name">{SITE_DATA.name}</h2>
                     <p class="about-role">Estudiante de Ciberseguridad</p>
                 </div>
-                    <Layout>
-                        <About />
-                    </Layout>
+                ---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import { SITE_DATA } from '../constants';
+import portraitImage from '../assets/portrait.png';
+
+import '../styles/about.css';
+---
+
+<Layout pageTitle="Sobre Mi">
+    <div class="page-container">
+
+        <h1>Sobre mí</h1>
+
+        <div class="about-content">
+
+            <div class="about-intro-wrapper centered-column">
+
+                <div class="about-header centered-column">
+                    <Image 
+                        src={portraitImage} 
+                        alt={SITE_DATA.name} 
+                        class="about-portrait" 
+                    />
+                    <h2 class="about-name">{SITE_DATA.name}</h2>
+                    <p class="about-role">Estudiante de Ciberseguridad</p>
+                </div>
+
+                <div class="intro-text">
+
+                    <p>
+                        Soy estudiante de ciberseguridad con un fuerte interés en la administración de sistemas Linux,
+                        redes, automatización y seguridad ofensiva. Mi enfoque principal se centra en el aprendizaje
+                        práctico mediante laboratorios, desafíos técnicos y la construcción de proyectos personales
+                        que me permiten desarrollar una comprensión sólida de los fundamentos de la seguridad informática.
+                    </p>
+
+                    <p>
+                        A lo largo de mi formación he trabajado con distribuciones Linux, scripting en Bash y herramientas
+                        utilizadas habitualmente en entornos de análisis y evaluación de seguridad. Considero que la mejor
+                        forma de aprender es mediante la práctica constante, por lo que dedico parte de mi tiempo al estudio
+                        de plataformas de entrenamiento, resolución de retos técnicos y documentación de conocimientos adquiridos.
+                    </p>
+
+                    <h3>Áreas de interés</h3>
+
+                    <ul class="skills-list">
+                        <li>Sistemas Linux y administración básica.</li>
+                        <li>Redes y protocolos de comunicación.</li>
+                        <li>Bash Scripting y automatización de tareas.</li>
+                        <li>Seguridad ofensiva y pruebas de penetración.</li>
+                        <li>Enumeración y análisis de servicios.</li>
+                        <li>Metodologías de aprendizaje práctico en ciberseguridad.</li>
+                    </ul>
+
+                    <p>
+                        Actualmente continúo fortaleciendo mis conocimientos técnicos mediante el estudio diario,
+                        la resolución de laboratorios y el desarrollo de proyectos personales orientados a la seguridad
+                        informática. Mi objetivo es construir una base sólida que me permita contribuir profesionalmente
+                        al ecosistema de ciberseguridad en Latinoamérica y participar en iniciativas que promuevan el
+                        aprendizaje, la investigación y el uso responsable de la tecnología.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</Layout>              
             <section>
                 <h2>Research Statement</h2>
                 <div class="info-card">
