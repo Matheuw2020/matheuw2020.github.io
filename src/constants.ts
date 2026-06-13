@@ -18,7 +18,7 @@ export const SITE_DATA = {
 
     // Bluesky handle (without the @)
     bluesky: "",
-    linkedin: "www.linkedin.com/in/lucas-mateo-jimenez-vergara-b79425184",
+    linkedin: "-mateo-jimenez-vergara-",
     github: "Matheuw2020",
 
     // Your email address (use [at] and [dot] to avoid spam bots)
